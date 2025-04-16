@@ -1,0 +1,154 @@
+.movie-info {
+    width: 100%;
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.movie-detail {
+    width: 50%;
+    height: 100%;
+    background: rgb(24, 24, 24);
+    background: linear-gradient(90deg, rgba(24, 24, 24, 1), rgba(24, 24, 24, 0) 100%);
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+}
+
+.movie-name {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.genres {
+    opacity: 0.6;
+    margin: 30px 0;
+}
+
+.des {
+    width: 70%;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+
+.starring span {
+    opacity: 0.6;
+}
+
+.trailer-container,
+.recommendations {
+    color: #fff;
+    padding: 5vw 5vh 0;
+}
+
+.heading {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+iframe {
+    width: 400px;
+    height: 200px;
+}
+
+.scroll-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.recommendations-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 15px;
+    padding: 10px; /* space for buttons */
+    scrollbar-width: none; /* Firefox */
+}
+
+.recommendations-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000; /* high z-index to ensure visibility */
+    background-color: rgba(0, 0, 0, 0.7); /* bright background */
+    color: rgb(255, 255, 255); /* contrast color */
+    border: none;
+    font-size: 32px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    
+}
+.scroll-wrapper:hover .scroll-btn {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scroll-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.scroll-btn.left {
+    left: 10px;
+}
+.scroll-btn.left:hover {
+    transform: translate(-5px, -50%);
+}
+
+.scroll-btn.right {
+    right: 10px;
+}
+.scroll-btn.right:hover {
+    transform: translate(5px, -50%);
+}
+
+
+.movie {
+    flex: 0 0 auto;
+    width: 320px;
+    height: 180px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.movie img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie p {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.movie:hover p {
+    opacity: 1;
+}
+
+img {
+    width: 135px;
+    height: 135px;
+}

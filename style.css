@@ -1,0 +1,181 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background: #181818;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    position: relative;
+}
+.search{
+    background-color: rgb(20, 20, 20);
+    border: 2px solid black;
+    padding:0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color:#E50914;
+    font-family: inherit;
+}
+.search:focus {
+    outline: none;
+}
+.search::placeholder {
+    color: #E50914;
+    opacity: 70%;
+    padding: 5px;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    
+    top: 0;
+    z-index: 10;
+    background-color: #000;
+    padding: 0 2.5vw;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 10%;
+    width: 30%;
+}
+
+.join-box {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.join-msg {
+    color: #E50914;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.btn {
+    border: 1px solid #fff;
+    border-radius: 2px;
+    background: none;
+    color: #fff;
+    height: 35px;
+    padding: 0 10px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.join-btn {
+    background-color: #dd0e15;
+    border-color: #dd0e15;
+    margin: 15px;
+}
+
+
+/* Main Container */
+.main {
+    margin-top: 60px;
+    padding: 40px 2.5vw;
+}
+
+/* Headings */
+.heading {
+    font-size: 50px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+/* Info Text */
+.info {
+    width: 50%;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Movie List Section */
+.movie-list {
+    margin-top: 40px;
+    position: relative;
+}
+
+.movie-category {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+/* Scrollable Movie Container */
+.movie-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+}
+
+.movie-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Movie Card */
+.movie {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+
+.movie img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.movie-title {
+    font-size: 14px;
+    margin-top: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    width: 40px;
+    height: 60px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 2;
+}
+
+.scroll-btn.left {
+    left: 0;
+}
+
+.scroll-btn.right {
+    right: 0;
+}
+
+.movie-list:hover .scroll-btn {
+    opacity: 1;
+}
